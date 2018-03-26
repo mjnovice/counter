@@ -1,12 +1,12 @@
 {
-  "name": "Start on Heroku: Go",
-  "description": "Go Getting Started Example App",
+  "name": "Counter",
+  "description": "I count the number of people.",
   "keywords": [
-    "getting-started",
+    "counter",
     "go",
-    "sample",
-    "example"
+    "crowd",
+    "people"
   ],
-  "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started"
+  "website": "http://github.com/mjnovice/counter",
+  "repository": "http://github.com/mjnovice/counter"
 }
