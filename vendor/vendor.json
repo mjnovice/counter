@@ -21,6 +21,18 @@
 			"revision": "4cc2de6207f4128624cbdd16be30f64966c67c08"
 		},
 		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "KGBsAyAxS+hp4NHh1kbI6nIVDbI=",
+			"path": "github.com/gorilla/mux",
+			"revision": "4dbd923b0c9e99ff63ad54b0e9705ff92d3cdb06",
+			"revisionTime": "2018-03-14T16:31:26Z"
+		},
+		{
 			"checksumSHA1": "MFkrEy77SoBbEtLd3Ros+NZO35w=",
 			"path": "github.com/heroku/x/hmetrics",
 			"revision": "705849e307dd75c91728463dea5bfd08ef493e64",
@@ -59,5 +71,5 @@
 			"revision": "d627af88ac021317a280d320986282a6dc97549a"
 		}
 	],
-	"rootPath": "github.com/heroku/go-getting-started"
+	"rootPath": "github.com/mjnovice/counter"
 }

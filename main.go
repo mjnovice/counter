@@ -1,14 +1,24 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/gin-gonic/gin"
+	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
 )
 
+type Place struct {
+	Name  string `json:"name,omitempty"`
+	Count int64  `json:"count,omitempty"`
+}
+
+func GetPeople(w http.ResponseWriter, r *http.Request) {
+	place := Place{Name: "Plaza Singapura", Count: 123}
+	json.NewEncoder(w).Encode(place)
+}
 func main() {
 	port := os.Getenv("PORT")
 
@@ -16,14 +26,7 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.LoadHTMLGlob("templates/*.tmpl.html")
-	router.Static("/static", "static")
-
-	router.GET("/", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.tmpl.html", nil)
-	})
-
-	router.Run(":" + port)
+	router := mux.NewRouter()
+	router.HandleFunc("/place/{name}", GetPlace).Methods("GET")
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
